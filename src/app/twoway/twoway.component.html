@@ -1,0 +1,9 @@
+<label>City</label>
+
+<input type="text" [(ngModel)]="city">
+
+<button (click)="handleClick(city)" >add<span class="fa fa-plus"></span></button>
+
+<ol>
+<li *ngFor="let ct of cityList">{{ct}}</li>
+</ol>

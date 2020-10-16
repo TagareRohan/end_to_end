@@ -1,0 +1,23 @@
+.yellowText
+{
+    color : #ffdd00;
+    font-size: x-large;
+}
+
+.blueText
+{
+    color: #00008b;
+    font-size: x-large;
+}
+
+.thickBorder
+{
+    border: 2px solid #8a2be2;
+    border-radius: 5px;
+}
+
+.thinBorder
+{
+    border: 1px solid #8a2be2;
+    border-radius: 5px;
+}

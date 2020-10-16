@@ -1,15 +1,59 @@
 <h1 class="text-info text-center">Cibil Scores</h1>
 
+<img src="../../assets/images/index.jpeg" alt="image" [ngStyle]={display:showImage}>
 
+<!--
+<input type="text" [(ngModel)]="queryString">
+
+<app-search [searchLabel]="search" [searchString]="queryString" (responseEvent)="handleResponse($event)"></app-search>
+
+<h3>{{result}}</h3>
+<h6>{{currentDate | date: 'medium'}}</h6>
+<h3> Salary : {{salary | currency: '$': 'symbol'}}</h3>
+
+-->
+<input type="text" [(ngModel)]="criteria">
 <table class="table table-striped">
   <tr>
     <th>Pan Number</th>
     <th>First Name</th>
     <th>Score</th>
   </tr>
-    <tr>
+    <tr *ngFor="let score of scoreList | myfilter : 'score': criteria">
       <td>{{score.panNumber}}</td>
-      <td>{{score.firstName}}</td>
-      <td>{{score.score}}</td>
+      <td>{{score.firstName | uppercase}}</td>
+      <td>{{score.score | number: '3.2-2'}}</td>
+      <td><button (click)="handleClick(buttonName)" >{{buttonName}}</button></td>
+    <!--  
+      <td><button (click)="handleClick('show')" [disabled]="disableShow">Show</button></td>
+      <td><button (click)="handleClick('hide')" [disabled]="disableHide">Hide</button></td>
+    -->
     </tr>
 </table>
+
+<label>Enter heading name</label>
+<input type="text" [(ngModel)]="tableHeadings">
+
+<label>Enter values</label>
+<input type="text" [(ngModel)]="tableEntries">
+
+
+<app-search [headings]="tableHeadings" [entries]="tableEntries"></app-search>
+
+ 
+
+<table class="table table-striped">
+
+  <tr >
+    <th *ngFor="let tb of headList">{{tb}}</th>
+  </tr>
+  <tr >
+    <td *ngFor="let tb of enterList">{{tb}}</td>
+  </tr>
+
+</table>
+
+<!--
+<app-twoway></app-twoway>
+
+-->

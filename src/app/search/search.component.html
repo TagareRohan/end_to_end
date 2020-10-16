@@ -1,0 +1,32 @@
+
+<!--give an array -->
+<!--
+<h1 [ngClass]=[textColor,border]>Component Nesting</h1>
+-->
+
+<!--using objects-->
+<!--
+<h4 (mouseover)="change()" [ngClass]="{'yellowText':showColor,'thickBorder':showBorder}">Done during training session</h4>
+-->
+
+<!--directly give class name-->
+<!--
+<label [ngClass]="textColor"> {{searchLabel}} </label>
+-->
+
+<!--
+<button (click)="handleClick()">Find</button>
+-->
+<button (click)="handleSubmit()">Create</button>
+
+<table class="table table-striped">
+
+    <tr >
+      <th *ngFor="let tb of headingList">{{tb}}</th>
+    </tr>
+    <tr >
+      <td *ngFor="let tb of entryList">{{tb}}</td>
+    </tr>
+  
+</table>
+

@@ -1,0 +1,22 @@
+{
+
+    "scores":[
+        {
+            "panNumber":"123abc",
+            "firstName":"ram",
+            "score":450
+        },
+        {
+            "panNumber":"456xyz",
+            "firstName":"sam",
+            "score":120
+        },
+        {
+            "panNumber":"789pqr",
+            "firstName":"raj",
+            "score":900
+        }
+
+    ]
+
+}
