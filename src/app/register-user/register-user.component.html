@@ -1,0 +1,17 @@
+<form #frm="ngForm" (ngSubmit)="submit(frm.value)">
+
+  <label for="">First Name</label>
+  <input type="text" name="firstName" [ngModel]="userToAdd.firstName">
+  
+  <label for="">Last Name</label>
+  <input type="text" name="lastName" [ngModel]="userToAdd.lastName">
+  
+  <label for="">Email</label>
+  <input type="email" name="email" [ngModel]="userToAdd.email">
+  
+  <label for="">Phone Number</label>
+  <input type="text" name="phoneNumber" [ngModel]="userToAdd.phoneNumber">
+  
+  <button>Submit</button>
+
+</form>

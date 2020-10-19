@@ -1,0 +1,19 @@
+<input type="text" [(ngModel)]="criteria">
+<table class="table table-striped">
+  <tr>
+    <th>Driver Id</th>
+    <th>Driver Name</th>
+    <th>Driver Licence</th>
+    <th>Rating</th>
+    <th>Location</th>
+  </tr>
+  <tr *ngFor="let drive of drivers | driverfilter : 'driverName': criteria">
+    
+    <td>{{drive.driverId}}</td>
+    <td>{{drive.driverName}}</td>
+    <td>{{drive.driverLicence}}</td>
+    <td>{{drive.rating}}</td>
+    <td>{{drive.location}}</td>
+
+  </tr>
+</table>

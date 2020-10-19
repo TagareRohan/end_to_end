@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'loanApplication';
+
+  myLogo="/assets/images/index.png";
+  myMoto="Best Company";
+  myCopyright="By Rohan";
+  myEmail="abc@xyz.com";
+
 }

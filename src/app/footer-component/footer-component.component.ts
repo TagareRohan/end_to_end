@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FooterData } from '../footer-data';
 
 @Component({
@@ -9,16 +9,25 @@ import { FooterData } from '../footer-data';
 export class FooterComponentComponent implements OnInit {
 
 
-  foot: FooterData={
-    designer:'rohan',
-    copyright:'@rohan',
-    email:'abc@xyz.com'
+  // foot: FooterData={
+  //   designer:'rohan',
+  //   copyright:'@rohan',
+  //   email:'abc@xyz.com'
 
-  };
+  // };
+
+  @Input() footerCopyright: string;
+  @Input() footerEmail: string;
+
+  copyright="";
+  email="";
 
   constructor() { }
 
   ngOnInit() {
+
+    this.copyright=this.footerCopyright;
+    this.email=this.footerEmail;
   }
 
 }

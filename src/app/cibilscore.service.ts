@@ -19,5 +19,12 @@ export class CibilscoreService {
     
   }
 
+  add(entity: CibilScore): Observable<CibilScore> {
+    return this.client.post<CibilScore>(this.url, entity);
+  }
+
+  remove(entity: CibilScore): Observable<CibilScore> {
+    return this.client.delete<CibilScore>(this.url+"/"+entity.id);
+  }
 
 }
